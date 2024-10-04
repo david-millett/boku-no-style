@@ -10,7 +10,7 @@ const Brand = require('../models/brand.js')
 //Index route - browse brands
 router.get('/', (req, res) => {
     try {
-        res.send('Browse brands')
+        res.render('brands/index.ejs')
     } catch (error) {
         console.log(error)
         return res.status(500).send('An error occured')
