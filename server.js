@@ -8,6 +8,8 @@ require('dotenv/config')
 const app = express()
 const port = 3000
 
+//! -- Controllers
+const brandsController = require('./controllers/brands.js')
 
 //! -- Middleware
 
@@ -20,8 +22,8 @@ app.get('/', async (req, res) => {
     res.render('index.ejs')
 })
 
-//* -- Routers
-
+//* -- Controllers
+app.use('/brands', brandsController)
 
 //! -- Server connection
 
