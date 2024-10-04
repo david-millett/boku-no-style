@@ -18,6 +18,9 @@ router.get('/', (req, res) => {
 })
 
 //New page - form
+router.get('/new', (req, res) => {
+    res.render('brands/new.ejs')
+})
 
 //Create route
 

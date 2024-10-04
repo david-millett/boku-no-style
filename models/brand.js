@@ -7,8 +7,8 @@ const brandSchema = new mongoose.Schema({
     priceRange: Number,
     // location:
     description: String,
-    logo: String,
-    heroImg: String,
+    // logo: String,
+    // heroImg: String,
     // createdBy: 
     // comments:
     // gallery:
