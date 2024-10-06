@@ -10,6 +10,7 @@ const port = 3000
 
 //! -- Controllers
 const brandsController = require('./controllers/brands.js')
+const authController = require ('./controllers/auth.js')
 
 //! -- Middleware
 app.use(morgan('dev'))
@@ -24,6 +25,7 @@ app.get('/', async (req, res) => {
 
 //* -- Controllers
 app.use('/brands', brandsController)
+app.use('/auth', authController)
 
 //! -- Server connection
 const startServers = async () => {
