@@ -4,7 +4,6 @@ const mongoose = require('mongoose')
 require('dotenv/config')
 
 //! -- Variables
-
 const app = express()
 const port = 3000
 
@@ -12,11 +11,10 @@ const port = 3000
 const brandsController = require('./controllers/brands.js')
 
 //! -- Middleware
-
 app.use(morgan('dev'))
+app.use(express.urlencoded({ extended: false }))
 
 //! -- Route handlers
-
 //* -- Landing page
 app.get('/', async (req, res) => {
     res.render('index.ejs')
@@ -26,7 +24,6 @@ app.get('/', async (req, res) => {
 app.use('/brands', brandsController)
 
 //! -- Server connection
-
 const startServers = async () => {
     try {
         await mongoose.connect(process.env.MONGODB_URI)

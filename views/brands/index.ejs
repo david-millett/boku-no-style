@@ -8,8 +8,9 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Browse brands</h1>
-    <p>Brand 1</p>
-    <p>Brand 2</p>
+    <% brands.forEach((brand) => { %>
+        <p><%= brand.name %></p>
+    <% }) %>
     <a href="/brands/new">Add brand</a>
 </body>
 </html>

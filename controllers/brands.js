@@ -8,9 +8,11 @@ const Brand = require('../models/brand.js')
 //! -- Routes
 
 //Index route - browse brands
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     try {
-        res.render('brands/index.ejs')
+        const brands = await Brand.find()
+        console.log(brands)
+        res.render('brands/index.ejs', { brands })
     } catch (error) {
         console.log(error)
         return res.status(500).send('An error occured')
@@ -23,8 +25,18 @@ router.get('/new', (req, res) => {
 })
 
 //Create route
+router.post('/', async (req, res) => {
+    try {
+        await Brand.create(req.body)
+        return res.redirect('/brands')
+    } catch (error) {
+        console.log(error)
+        res.status(500).send('An error occured')
+    }
+})
 
 //Show page
+
 
 //Edit page - form
 
