@@ -1,6 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
 require('dotenv/config')
 
 //! -- Variables
@@ -13,6 +14,7 @@ const brandsController = require('./controllers/brands.js')
 //! -- Middleware
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
+app.use(methodOverride('_method'))
 
 //! -- Route handlers
 //* -- Landing page

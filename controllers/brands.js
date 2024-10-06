@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
         return res.redirect('/brands')
     } catch (error) {
         console.log(error)
-        res.status(500).send('An error occured')
+        return res.status(500).send('An error occured')
     }
 })
 
@@ -43,7 +43,7 @@ router.get('/:brandId', async (req, res) => {
         res.render('brands/show.ejs', { brand })
     } catch (error) {
         console.log(error)
-        res.status(500).send('An error occurred')
+        return res.status(500).send('An error occurred')
     }
 })
 
@@ -52,5 +52,14 @@ router.get('/:brandId', async (req, res) => {
 //Update route
 
 //Delete route
+router.delete('/:brandId', async (req, res) => {
+    try {
+        await Brand.findByIdAndDelete(req.params.brandId)
+        return res.redirect('/brands')
+    } catch (error) {
+        console.log(error)
+        return res.status(500).send('An error occurred')
+    }
+})
 
 module.exports = router
