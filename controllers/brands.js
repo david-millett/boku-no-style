@@ -48,8 +48,27 @@ router.get('/:brandId', async (req, res) => {
 })
 
 //Edit page - form
+router.get('/:brandId/edit', async (req, res) => {
+    try {
+        const brand = await Brand.findById(req.params.brandId)
+        console.log(brand)
+        return res.render('brands/edit.ejs', { brand })
+    } catch (error) {
+        console.log(error)
+        return res.status(500).send('An error occurred')
+    }
+})
 
 //Update route
+router.put('/:brandId', async (req, res) => {
+    try {
+        await Brand.findByIdAndUpdate(req.params.brandId, req.body)
+        return res.redirect(`/brands/${req.params.brandId}`)
+    } catch (error) {
+        console.log(error)
+        return res.status(500).send('An error occurred')
+    }
+})
 
 //Delete route
 router.delete('/:brandId', async (req, res) => {

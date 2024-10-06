@@ -12,6 +12,7 @@
     <p>Website: <%= brand.website %></p>
     <p>Price range: <%= brand.priceRange %></p>
     <p><%= brand.description %></p>
+    <a href="/brands/<%= brand._id %>/edit"><button>Edit <%= brand.name %></button></a>
     <form action="/brands/<%= brand._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete this brand</button>
     </form>

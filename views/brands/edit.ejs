@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Edit <%= brand.name %></h1>
+    <form action="/brands/<%= brand._id %>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= brand.name %>" />
+        <label for="website">Website:</label>
+        <input type="url" name="website" id="website" value="<%= brand.website %>" />
+        <label for="established">Year established:</label>
+        <input type="text" name="established" id="established" value="<%= brand.established %>" />
+        <fieldset>
+            <legend>Price Range:</legend>
+            <input type="radio" id="low" name="priceRange" value="¥" <% if (brand.priceRange === '¥') { %>checked<% } %> />
+            <label for="low">Low</label>
+            <input type="radio" id="mid" name="priceRange" value="¥¥" <% if (brand.priceRange === '¥¥') { %>checked<% } %> />
+            <label for="mid">Mid</label>
+            <input type="radio" id="high" name="priceRange" value="¥¥¥" <% if (brand.priceRange === '¥¥¥') { %>checked<% } %> />
+            <label for="high">High</label>
+        </fieldset>
+        <label for="description">Description</label>
+        <textarea name="description" id="description"><%= brand.description %></textarea>
+        <button type="submit">Save changes</button>
+    </form>
+    <a href="/brands/<%= brand._id %>">Back to <%= brand.name %></a>
+</body>
+</html>
