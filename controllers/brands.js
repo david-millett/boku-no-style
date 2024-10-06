@@ -36,7 +36,16 @@ router.post('/', async (req, res) => {
 })
 
 //Show page
-
+router.get('/:brandId', async (req, res) => {
+    try {
+        const brand = await Brand.findById(req.params.brandId)
+        console.log(brand)
+        res.render('brands/show.ejs', { brand })
+    } catch (error) {
+        console.log(error)
+        res.status(500).send('An error occurred')
+    }
+})
 
 //Edit page - form
 

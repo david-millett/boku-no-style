@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= brand.name %></h1>
+    <p>Established: <%= brand.established %></p>
+    <p>Website: <%= brand.website %></p>
+    <p>Price range: <%= brand.priceRange %></p>
+    <p><%= brand.description %></p>
+    <a href="/brands">Back to brands</a>
+</body>
+</html>
