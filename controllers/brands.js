@@ -5,6 +5,9 @@ const router = express.Router()
 //Model
 const Brand = require('../models/brand.js')
 
+//Middleware functions
+const isSignedin = require('../middleware/is-signed-in.js')
+
 //! -- Routes
 
 //Index route - browse brands
@@ -20,12 +23,12 @@ router.get('/', async (req, res) => {
 })
 
 //New page - form
-router.get('/new', (req, res) => {
+router.get('/new', isSignedin, (req, res) => {
     res.render('brands/new.ejs')
 })
 
 //Create route
-router.post('/', async (req, res) => {
+router.post('/', isSignedin, async (req, res) => {
     try {
         await Brand.create(req.body)
         return res.redirect('/brands')

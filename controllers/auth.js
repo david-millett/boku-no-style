@@ -26,14 +26,13 @@ router.post('/sign-up', async (req, res) => {
         }
         req.body.password = bcrypt.hashSync(req.body.password)
         const newUser = await User.create(req.body)
-
-
-        //create session to sign user in
-
-
-        return res.redirect('/')
-
-
+        req.session.user = {
+            username: newUser.username,
+            _id: newUser._id
+        }
+        req.session.save(() => {
+            return res.redirect('/')
+        })
     } catch (error) {
         console.log(error)
         res.status(500).send('An error has occurred')
@@ -61,7 +60,9 @@ router.post('/sign-in', async (req, res) => {
             username: userInDatabase.username,
             _id: userInDatabase._id,
         }
-        return res.redirect('/')
+        req.session.save(() => {
+            return res.redirect('/')
+        })
     } catch (error) {
         console.log(error)
         res.status(500).send('An error occurred')
@@ -70,8 +71,9 @@ router.post('/sign-in', async (req, res) => {
 
 //Sign out
 router.get('/sign-out', (req, res) => {
-    req.session.destroy()
-    return res.redirect('/')
+    req.session.destroy(() => {
+        return res.redirect('/')
+    })
 })
 
 //Profile page
