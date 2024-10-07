@@ -12,6 +12,7 @@ const brandSchema = new mongoose.Schema({
     // createdBy: 
     // comments:
     // gallery:
+    addedBy: { type: mongoose.Types.ObjectId, ref: 'User', require: true }
 })
 
 const Brand = mongoose.model("Brand", brandSchema)

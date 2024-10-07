@@ -43,6 +43,11 @@ app.get('/', async (req, res) => {
 app.use('/brands', brandsController)
 app.use('/auth', authController)
 
+//! -- 404
+app.get('*', (req, res) => {
+    return res.status(404).render('404.ejs')
+})
+
 //! -- Server connection
 const startServers = async () => {
     try {

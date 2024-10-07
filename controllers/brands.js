@@ -14,7 +14,6 @@ const isSignedin = require('../middleware/is-signed-in.js')
 router.get('/', async (req, res) => {
     try {
         const brands = await Brand.find()
-        console.log(brands)
         res.render('brands/index.ejs', { brands })
     } catch (error) {
         console.log(error)
@@ -30,6 +29,7 @@ router.get('/new', isSignedin, (req, res) => {
 //Create route
 router.post('/', isSignedin, async (req, res) => {
     try {
+        
         await Brand.create(req.body)
         return res.redirect('/brands')
     } catch (error) {
@@ -39,11 +39,16 @@ router.post('/', isSignedin, async (req, res) => {
 })
 
 //Show page
-router.get('/:brandId', async (req, res) => {
+router.get('/:brandId', async (req, res, next) => {
     try {
-        const brand = await Brand.findById(req.params.brandId)
-        console.log(brand)
-        res.render('brands/show.ejs', { brand })
+        if (mongoose.Types.ObjectId.isValid(req.params.brandId)) {
+            const brand = await Brand.findById(req.params.brandId)
+            if (!brand) return next()
+            console.log(brand)
+            return res.render('brands/show.ejs', { brand })
+        } else {
+            next()
+        }
     } catch (error) {
         console.log(error)
         return res.status(500).send('An error occurred')
@@ -76,7 +81,8 @@ router.put('/:brandId', async (req, res) => {
 //Delete route
 router.delete('/:brandId', async (req, res) => {
     try {
-        await Brand.findByIdAndDelete(req.params.brandId)
+        const brandToDelete = await Brand.findByIdAndDelete(req.params.brandId)
+        console.log(brandToDelete)
         return res.redirect('/brands')
     } catch (error) {
         console.log(error)
