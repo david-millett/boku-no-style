@@ -10,7 +10,7 @@
     <p>For people interested in Japanese streetwear and fashion. Say welcome if logged in.</p>
 
     <% if (user) { %>
-        <a href="/auth/sign-out">Sign out</a>
+        <p>Logged in as <%= user.username %>. <a href="/auth/sign-out">Sign out</a></p>
     <% } else { %>
         <a href="/auth/sign-up">Sign up</a> or <a href="/auth/sign-in">Sign in</a>
     <% } %>

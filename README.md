@@ -18,3 +18,5 @@ made sign up and sign in forms
 
 day 3
 no huge issues to begin with - problem solving of errors was just minor syntax mistakes with sign in form
+signing in and creating a session went fine - I tried to integrate too many features simultaneously, so had to break down the steps and add functionality in set stages to enable all the things I needed to do
+That's one thing I learned from this project = there are many steps and it helps if you are clear on a set order - and be ok with the fact that you may rebuild parts later. It's important to check the steps are working correctly before implementing more complex parts.

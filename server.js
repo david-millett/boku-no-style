@@ -13,6 +13,9 @@ const port = 3000
 const brandsController = require('./controllers/brands.js')
 const authController = require ('./controllers/auth.js')
 
+//! -- Middleware functions
+const passUserToView = require('./middleware/pass-user-to-view.js')
+
 //! -- Middleware
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
@@ -24,13 +27,12 @@ app.use(
         saveUninitialized: true,
     })
 )
+app.use(passUserToView)
 
 //! -- Route handlers
 //* -- Landing page
 app.get('/', async (req, res) => {
-    res.render('index.ejs', {
-        user: req.session.user,
-    })
+    res.render('index.ejs')
 })
 
 //* -- Controllers
