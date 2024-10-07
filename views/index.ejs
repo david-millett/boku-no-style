@@ -7,8 +7,14 @@
 </head>
 <body>
     <%- include('./partials/_navbar.ejs') %>
-    <p>For people interested in Japanese streetwear and fashion.</p>
-    <a href="/auth/sign-up">Sign up</a>
-    <a href="/auth/sign-in">Sign in</a>
+    <p>For people interested in Japanese streetwear and fashion. Say welcome if logged in.</p>
+
+    <% if (user) { %>
+        <a href="/auth/sign-out">Sign out</a>
+    <% } else { %>
+        <a href="/auth/sign-up">Sign up</a> or <a href="/auth/sign-in">Sign in</a>
+    <% } %>
+
+
 </body>
 </html>

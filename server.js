@@ -2,6 +2,7 @@ const express = require('express')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
+const session = require('express-session')
 require('dotenv/config')
 
 //! -- Variables
@@ -16,11 +17,20 @@ const authController = require ('./controllers/auth.js')
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride('_method'))
+app.use(
+    session({
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: true,
+    })
+)
 
 //! -- Route handlers
 //* -- Landing page
 app.get('/', async (req, res) => {
-    res.render('index.ejs')
+    res.render('index.ejs', {
+        user: req.session.user,
+    })
 })
 
 //* -- Controllers
