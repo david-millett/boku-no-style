@@ -16,6 +16,7 @@
     <form action="/brands/<%= brand._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete this brand</button>
     </form>
+    <p>This brand was added by <%= brand.addedBy.username %></p>
     <a href="/brands">Back to brands</a>
 </body>
 </html>
