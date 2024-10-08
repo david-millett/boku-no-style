@@ -1,12 +1,20 @@
 <nav>
-    <a href="/">Home</a>
-    <a href="/brands">Browse brands</a>
-    <h1>Boku no Style</h1>
-    <% if (user) { %>
-        <a href="/auth/profile">My profile</a>
-        <a href="/auth/sign-out">Sign out</a>
-    <% } else { %>
-        <a href="/auth/sign-up">Sign up</a>
-        <a href="/auth/sign-in">Sign in</a>
-    <% } %>
+    <div class="nav-section">
+        <a href="/">Home</a>
+        <a href="/brands">Browse brands</a>
+    </div>
+    <div class="logo">
+        <h1>Boku</h1>
+        <h1>no</h1>
+        <h1>Style</h1>
+    </div>
+    <div class="nav-section">
+        <% if (user) { %>
+            <a href="/auth/profile">My profile</a>
+            <a href="/auth/sign-out">Sign out</a>
+        <% } else { %>
+            <a href="/auth/sign-up">Sign up</a>
+            <a href="/auth/sign-in">Sign in</a>
+        <% } %>
+    </div>
 </nav>

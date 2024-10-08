@@ -9,9 +9,19 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Browse brands</h1>
-    <% brands.forEach((brand) => { %>
-        <p><a href="/brands/<%= brand._id %>"><%= brand.name %></a></p>
-    <% }) %>
+    <div class="brands-grid">
+        <% brands.forEach((brand) => { %>
+            <div class="brand-item">
+                <p>logo</p>
+                <p><a href="/brands/<%= brand._id %>"><%= brand.name %></a></p>
+            </div>
+            
+            
+        <% }) %>
+    </div>
+
+
+    
     <a href="/brands/new">Add brand</a>
 </body>
 </html>

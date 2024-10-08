@@ -11,7 +11,7 @@
     <h1><%= profile.username %>'s profile</h1>
     <h2>Favourite brands</h2>
     <% profile.favouriteBrands.forEach(brand => { %>
-        <p><%= brand.name %></p>
+        <p><a href="/brands/<%= brand._id %>"><%= brand.name %></a></p>
     <% }) %>
 </body>
 </html>
