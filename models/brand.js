@@ -8,8 +8,7 @@ const brandSchema = new mongoose.Schema({
     // location:
     description: String,
     logo: { type: String },
-    // heroImg: String,
-    // createdBy: 
+    // heroImg: { type: String },
     // comments:
     // gallery:
     addedBy: { type: mongoose.Types.ObjectId, ref: 'User', require: true },

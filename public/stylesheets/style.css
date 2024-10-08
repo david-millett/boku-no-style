@@ -30,3 +30,13 @@ nav {
 .brands-grid {
     display: flex;
 }
+
+.brand-logo {
+    width: 100px;
+}
+
+/* Show page */
+
+.hero-image {
+    width: 100%;
+}

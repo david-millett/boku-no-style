@@ -12,7 +12,7 @@
     <div class="brands-grid">
         <% brands.forEach((brand) => { %>
             <div class="brand-item">
-                <p>logo</p>
+                <img src="/<%= brand.logo %>" alt="<%= brand.name %>'s logo" class="brand-logo" />
                 <p><a href="/brands/<%= brand._id %>"><%= brand.name %></a></p>
             </div>
             
