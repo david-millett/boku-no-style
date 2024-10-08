@@ -31,3 +31,4 @@ ability to upload images
 then error handling
 then comments
 these are the most important things for it to work
+First priority was to add the ability to 'like' brands, as this is a core feature of the website. Managed to implement this by implementing a many-to-many relationship between brands and users, the most complex part of the project so far, which required reading around how to implement this. Created a virtual field on the user model to allow users to access a list of all the brands they like on their profile.

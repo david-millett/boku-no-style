@@ -6,6 +6,7 @@ const router = express.Router()
 
 // ! -- Model
 const User = require('../models/user')
+const isSignedin = require('../middleware/is-signed-in')
 
 // ! -- Routes
 
@@ -77,7 +78,16 @@ router.get('/sign-out', (req, res) => {
 })
 
 //Profile page
-
+router.get('/profile', isSignedin, async (req, res) => {
+    try {
+        const myProfile = await User.findById(req.session.user._id).populate('favouriteBrands')
+        console.log(myProfile)
+        return res.render('auth/profile.ejs', { profile: myProfile })
+    } catch (error) {
+        console.log(error)
+        return res.status(500).send('An error occurred')
+    }
+})
 
 
 
