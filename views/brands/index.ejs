@@ -11,12 +11,12 @@
     <h1>Browse brands</h1>
     <div class="brands-grid">
         <% brands.forEach((brand) => { %>
-            <div class="brand-item">
+            <div class="brand-card"><a href="/brands/<%= brand._id %>">
+                <div class="brand-title">
+                    <p><%= brand.name %></p>
+                </div>
                 <img src="/<%= brand.logo %>" alt="<%= brand.name %>'s logo" class="brand-logo" />
-                <p><a href="/brands/<%= brand._id %>"><%= brand.name %></a></p>
-            </div>
-            
-            
+            </a></div>
         <% }) %>
     </div>
 

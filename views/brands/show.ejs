@@ -8,11 +8,17 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= brand.name %></h1>
-    <img src="/<%= brand.logo %>" alt="<%= brand.name %>'s logo" class="hero-image"/>
-    <p>Established: <%= brand.established %></p>
-    <p>Website: <%= brand.website %></p>
-    <p>Price range: <%= brand.priceRange %></p>
+    <div class="hero">
+        <div class="main-title">
+            <h1><%= brand.name %></h1>
+        </div>
+        <img src="/<%= brand.logo %>" alt="<%= brand.name %>'s logo" class="hero-image"/>
+    </div>
+    <div class="stats">
+        <p>Website: <%= brand.website %></p>
+        <p>Established: <%= brand.established %></p>
+        <p>Price range: <%= brand.priceRange %></p>
+    </div>
     <h3>Add to favourites</h3>
     <p><%= brand.fans.length %></p>
     <% if (brand.fans.some(fan => fan.equals(user._id))) { %>

@@ -10,8 +10,17 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1><%= profile.username %>'s profile</h1>
     <h2>Favourite brands</h2>
-    <% profile.favouriteBrands.forEach(brand => { %>
-        <p><a href="/brands/<%= brand._id %>"><%= brand.name %></a></p>
-    <% }) %>
+    <div class="brands-grid">
+        <% profile.favouriteBrands.forEach((brand) => { %>
+            <div class="brand-card"><a href="/brands/<%= brand._id %>">
+                <div class="brand-title">
+                    <p><%= brand.name %></p>
+                </div>
+                <img src="/<%= brand.logo %>" alt="<%= brand.name %>'s logo" class="brand-logo" />
+            </a></div>
+        <% }) %>
+    </div>
+
+
 </body>
 </html>

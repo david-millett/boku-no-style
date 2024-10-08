@@ -23,20 +23,82 @@ nav {
 
 .logo {
     border: 3px solid #92493B;
+    background-color: #888174;
+    color: white;
+}
+
+.logo:hover {
+    color: #325C46;
+    content: 'hey';
+}
+
+.nav-section {
+    width: 33%;
+}
+
+.nav-section .japanese {
+    display: none;
+}
+
+.nav-section:hover .japanese {
+    display: inline;
+}
+.nav-section:hover .english {
+    display: none;
 }
 
 /* Browse brands */
 
 .brands-grid {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand-card {
+    position: relative;
+}
+
+.brand-title {
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .brand-logo {
-    width: 100px;
+    width: 355px;
+    /* height: 100px; */
+    border-radius: 8px;
 }
 
 /* Show page */
 
+.hero {
+    position: relative;
+    text-align: center;
+}
+
 .hero-image {
     width: 100%;
+    max-width: 600px;
+}
+
+.main-title {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-evenly;
 }
