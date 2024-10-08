@@ -8,13 +8,12 @@
 <body>
     <%- include('./partials/_navbar.ejs') %>
     <p>For people interested in Japanese streetwear and fashion. Say welcome if logged in.</p>
-
+    <p><a href="/brands">Browse brands</a></p>
     <% if (user) { %>
         <p>Logged in as <%= user.username %>. <a href="/auth/sign-out">Sign out</a></p>
     <% } else { %>
         <a href="/auth/sign-up">Sign up</a> or <a href="/auth/sign-in">Sign in</a>
     <% } %>
-
-
+    
 </body>
 </html>

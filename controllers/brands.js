@@ -44,6 +44,7 @@ router.get('/:brandId', async (req, res, next) => {
         if (mongoose.Types.ObjectId.isValid(req.params.brandId)) {
             const brand = await Brand.findById(req.params.brandId).populate('addedBy')
             if (!brand) return next()
+                console.log(brand)
             return res.render('brands/show.ejs', { brand })
         } else {
             next()
@@ -101,6 +102,38 @@ router.delete('/:brandId', async (req, res) => {
     } catch (error) {
         console.log(error)
         return res.status(500).send('An error occurred')
+    }
+})
+
+//! -- Adding to/removing from favourites
+
+//Add to favourites
+router.post('/:brandId/favourites', isSignedin, async (req, res, next) => {
+    try {
+        const brand = await Brand.findById(req.params.brandId)
+        if (!brand) return next()       
+        brand.fans.push(req.session.user._id)
+        await brand.save()
+        return res.redirect(`/brands/${req.params.brandId}`)
+    } catch (error) {
+        console.log(error)
+        //add error message
+        return res.redirect(`/brands/${req.params.brandId}`)
+    }
+})
+
+//Remove from favourites
+router.delete('/:brandId/favourites', isSignedin, async (req, res, next) => {
+    try {
+        const brand = await Brand.findById(req.params.brandId)
+        if (!brand) return next()       
+        brand.fans.pull(req.session.user._id)
+        await brand.save()
+        return res.redirect(`/brands/${req.params.brandId}`)
+    } catch (error) {
+        console.log(error)
+        //add error message
+        return res.redirect(`/brands/${req.params.brandId}`)
     }
 })
 

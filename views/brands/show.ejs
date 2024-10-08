@@ -11,6 +11,22 @@
     <p>Established: <%= brand.established %></p>
     <p>Website: <%= brand.website %></p>
     <p>Price range: <%= brand.priceRange %></p>
+    <h3>Add to favourites</h3>
+    <p><%= brand.fans.length %></p>
+    <% if (brand.fans.some(fan => fan.equals(user._id))) { %>
+        <!-- If user has already favourited, remove from fans array -->
+        <form action="/brands/<%= brand._id %>/favourites?_method=DELETE" method="POST">
+            <button>Remove from favourites</button>
+        </form>
+    <% } else { %>
+        <!-- If user is not a fan, add to fans array -->
+        <form action="/brands/<%= brand._id %>/favourites" method="POST">
+            <button>Add to favourites</button>
+        </form>
+    <% } %>
+    
+    
+
     <p><%= brand.description %></p>
     <a href="/brands/<%= brand._id %>/edit"><button>Edit <%= brand.name %></button></a>
     <form action="/brands/<%= brand._id %>?_method=DELETE" method="POST">

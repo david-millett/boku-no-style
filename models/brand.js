@@ -12,7 +12,8 @@ const brandSchema = new mongoose.Schema({
     // createdBy: 
     // comments:
     // gallery:
-    addedBy: { type: mongoose.Types.ObjectId, ref: 'User', require: true }
+    addedBy: { type: mongoose.Types.ObjectId, ref: 'User', require: true },
+    fans: [{ type: mongoose.Types.ObjectId, ref: 'User' }],
 })
 
 const Brand = mongoose.model("Brand", brandSchema)
