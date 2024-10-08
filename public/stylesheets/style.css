@@ -8,6 +8,11 @@ body {
     background-color: #D9DEDD;
 }
 
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
 /* Nav bar */
 
 nav {

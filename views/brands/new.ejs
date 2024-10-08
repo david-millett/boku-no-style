@@ -9,7 +9,7 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a brand</h1>
-    <form action="/brands" method="POST">
+    <form action="/brands" method="POST" enctype="multipart/form-data">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" />
         <label for="website">Website:</label>
@@ -27,6 +27,8 @@
         </fieldset>
         <label for="description">Description</label>
         <textarea name="description" id="description"></textarea>
+        <label for="logo">Logo image:</label>
+        <input type="file" name="logo" id="logo" accept="image/*" />
         <button type="submit">Add brand</button>
     </form>
     <a href="/brands">Back to brands</a>

@@ -21,6 +21,7 @@ const passUserToView = require('./middleware/pass-user-to-view.js')
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride('_method'))
+app.use('/uploads', express.static('uploads'))
 app.use(express.static('public'))
 app.use(
     session({

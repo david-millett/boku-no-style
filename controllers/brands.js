@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const express = require('express')
+
 const router = express.Router()
 
 //Model
@@ -7,6 +8,7 @@ const Brand = require('../models/brand.js')
 
 //Middleware functions
 const isSignedin = require('../middleware/is-signed-in.js')
+const upload = require('../middleware/file-upload.js')
 
 //! -- Routes
 
@@ -27,9 +29,12 @@ router.get('/new', isSignedin, (req, res) => {
 })
 
 //Create route
-router.post('/', isSignedin, async (req, res) => {
+router.post('/', isSignedin, upload.single('logo'), async (req, res) => {
     try {
-
+        if (req.file) {
+            req.body.logo = req.file.path
+        }
+        req.body.addedBy = req.session.user._id
         await Brand.create(req.body)
         return res.redirect('/brands')
     } catch (error) {
