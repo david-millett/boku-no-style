@@ -8,7 +8,7 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= profile.username %>'s profile</h1>
+    <h1 class="page-heading"><%= profile.username %>のプロフィール</h1>
     <h2>Favourite brands</h2>
     <div class="brands-grid">
         <% profile.favouriteBrands.forEach((brand) => { %>

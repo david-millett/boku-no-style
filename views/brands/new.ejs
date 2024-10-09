@@ -8,7 +8,7 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Add a brand</h1>
+    <h1 class="page-heading">ADD BRAND</h1>
     <form class="form-sheet" action="/brands" method="POST" enctype="multipart/form-data">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" />
@@ -31,8 +31,8 @@
         <input type="file" name="logo" id="logo" accept="image/*" />
         <!-- <label for="heroImg">Hero image:</label>
         <input type="file" name="heroImg" id="heroImg" accept="image/*" /> -->
-        <button type="submit">Add brand</button>
+        <button class="button-style" type="submit">Add brand</button>
     </form>
-    <a href="/brands">Back to brands</a>
+    <p class="small"><a href="/brands">Back to brands</a></p>
 </body>
 </html>

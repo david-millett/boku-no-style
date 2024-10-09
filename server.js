@@ -8,7 +8,7 @@ require('dotenv/config')
 
 //! -- Variables
 const app = express()
-const port = 3000
+const port = 4000
 
 //! -- Controllers
 const brandsController = require('./controllers/brands.js')

@@ -26,6 +26,25 @@ h1 {
     color: white;
 }
 
+.page-heading {
+    color: #798788;
+    margin-top: 20px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    color: #7b7363;
+    margin-top: 10px;
+}
+
+.small {
+    text-align: center;
+    font-size: 0.75rem;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
 /* Nav bar */
 
 nav {
@@ -65,16 +84,17 @@ nav {
     gap: 10px;
 }
 
-/* .nav-section .japanese {
+h1 .english {
     display: none;
 }
 
-.nav-section:hover .japanese {
+h1:hover .english {
     display: inline;
 }
-.nav-section:hover .english {
+
+h1:hover .japanese {
     display: none;
-} */
+}
 
 /* Browse brands */
 
@@ -119,10 +139,14 @@ nav {
 /* Show page */
 
 main {
+    background-color: #798788;
+}
+
+.content {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #798788;
+    background-color: #D9DEDD;
     color: #19201e;
 }
 
@@ -169,7 +193,7 @@ main {
     gap: 10px;
     margin-bottom: 20px;
     font-size: 0.9rem;
-    color: white;
+    color: #7b7363;
 }
 
 .invisible-button {
@@ -188,12 +212,6 @@ main {
     text-align: center;
 }
 
-.author {
-    text-align: center;
-    font-size: 0.75rem;
-    padding-bottom: 20px;
-}
-
 /* Forms */
 
 .form-sheet {
@@ -201,6 +219,9 @@ main {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
+    margin-bottom: 40px;
+    color: #7b7363;
+    font-weight: bold;
 }
 
 label {
@@ -223,9 +244,15 @@ textarea {
     height: 150px;
 }
 
-button[type="submit"] {
+.button-style {
+    text-decoration: none;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    background-color: #798788;
+    color: white;
+    padding: 0.2rem 2rem;
+    border-radius: 5px;
+    font-family: 'Oswald';
 }
