@@ -8,40 +8,46 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <main>
-        <div class="hero">
-            <div class="main-title">
-                <h1><%= brand.name %></h1>
-            </div>
-            <img src="/<%= brand.logo %>" alt="<%= brand.name %>'s logo" class="hero-image"/>
+    <div class="hero">
+        <div class="main-title">
+            <h1><%= brand.name %></h1>
         </div>
+        <img src="/<%= brand.logo %>" alt="<%= brand.name %>'s logo" class="hero-image"/>
+    </div>
+    <main>
         <div class="stats">
-            <p><a href="<%= brand.website %>" target="_blank">Website</a></p>
-            <p>Established: <%= brand.established %></p>
-            <p>Price range: <%= brand.priceRange %></p>
+            <p><a class="link" href="<%= brand.website %>" target="_blank">Website</a></p>
+            <p><strong>Established: </strong><%= brand.established %></p>
+            <p><strong>Price range: </strong><%= brand.priceRange %></p>
         </div>
         <div class="favourites">
-            <h3>Add to favourites</h3>
-            <p><%= brand.fans.length %></p>
-            <% if (brand.fans.some(fan => fan.equals(user._id))) { %>
+            <p>Favourited by <%= brand.fans.length %> user(s)</p>
+            <% if (user && brand.fans.some(fan => fan.equals(user._id))) { %>
                 <!-- If user has already favourited, remove from fans array -->
                 <form action="/brands/<%= brand._id %>/favourites?_method=DELETE" method="POST">
-                    <button>Remove from favourites</button>
+                    <button class="invisible-button"><img class="star" src="/images/star-filled.png" alt="Remove from favourites"></button>
                 </form>
             <% } else { %>
                 <!-- If user is not a fan, add to fans array -->
                 <form action="/brands/<%= brand._id %>/favourites" method="POST">
-                    <button>Add to favourites</button>
+                    <button class="invisible-button"><img class="star" src="/images/star-unfilled.png" alt="Add to favourites"></button>
                 </form>
             <% } %>
         </div>
-        <p><%= brand.description %></p>
-        <a href="/brands/<%= brand._id %>/edit"><button>Edit <%= brand.name %></button></a>
-        <form action="/brands/<%= brand._id %>?_method=DELETE" method="POST">
-            <button type="submit">Delete this brand</button>
-        </form>
-        <p>This brand was added by <%= brand.addedBy.username %></p>
-        <a href="/brands">Back to brands</a>
+        <p class="description"><%= brand.description %></p>
+
+        
+
+        <% if (user && brand.addedBy.equals(user._id)) { %>
+            <p class="author"><strong>You</strong> added this brand.</p>
+            <a href="/brands/<%= brand._id %>/edit"><button>Edit <%= brand.name %></button></a>
+            <form action="/brands/<%= brand._id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete this brand</button>
+            </form>
+        <% } else { %>
+            <p class="author">This brand was added by <strong><%= brand.addedBy.username %></strong></p>
+        <% } %>
+        <p class="author"><a class="link" href="/brands">Back to brands</a></p>
     </main>
 </body>
 </html>

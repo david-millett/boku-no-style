@@ -41,3 +41,5 @@ day 5
 today's plan is styling and giving each page an identity and populating the website with more initial info to make it more useful and interesting
 carousel?
 error handling
+wanted the app to work on mobile screens as well as desktop
+avoiding errors on show page required time and effort - to make sure that certain info only showed when the relevant user was logged in.

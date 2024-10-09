@@ -1,20 +1,18 @@
 <nav>
-    <div class="nav-section">
+    <!-- <div class="nav-section">
         <a href="/">Home</a>
-        <a href="/brands">Browse brands</a>
-    </div>
-    <div class="logo">
-        <h1>Boku</h1>
-        <h1>no</h1>
-        <h1>Style</h1>
+    </div> -->
+    <div>
+        <h1><a class="logo" href="/">Boku no Style</h1></a>
     </div>
     <div class="nav-section">
+        <a class="link" href="/brands">Browse brands</a>
         <% if (user) { %>
-            <a href="/auth/profile"><span class="english">profile</span><span class="japanese">プロフィール</span></a>
-            <a href="/auth/sign-out">Sign out</a>
+            <a class="link" href="/auth/profile"><span class="english">profile</span><span class="japanese">プロフィール</span></a>
+            <a class="link" href="/auth/sign-out">Sign out</a>
         <% } else { %>
-            <a href="/auth/sign-up">Sign up</a>
-            <a href="/auth/sign-in">Sign in</a>
+            <a class="link" href="/auth/sign-up">Register</a>
+            <a class="link" href="/auth/sign-in">Sign in</a>
         <% } %>
     </div>
 </nav>
