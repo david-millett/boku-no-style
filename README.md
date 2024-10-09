@@ -43,3 +43,17 @@ carousel?
 error handling
 wanted the app to work on mobile screens as well as desktop
 avoiding errors on show page required time and effort - to make sure that certain info only showed when the relevant user was logged in.
+With mobile and desktop views in mind, have to strive to create a design that looks good across two different viewpoints. Some, like the brands index and profile pages, immediately scaled well between the two views. The show page was one I found most difficult to get right - I liked the way it looked on mobile view but not as a bigger screen
+the positioning of the cards...
+position took a bit of gettin my head around. getting the text to sit in the centre of the brand cards required the card to be relativelypositioned. These would then scroll over the nav header whenever I tried to set it to be `sticky` at the top of the page. After some research, I discovered that setting a z-value could help with this.
+show page - looked good on small screen style, but scales to full width badly. This is something I want to research further as I believe it's really important.
+
+day 6
+error handling
+add gallery pics
+check his image changes
+homepage
+remove references to logo
+delete dead code
+check requirements
+some responsive bits
