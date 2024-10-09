@@ -9,11 +9,11 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a brand</h1>
-    <form action="/brands" method="POST" enctype="multipart/form-data">
+    <form class="form-sheet" action="/brands" method="POST" enctype="multipart/form-data">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" />
         <label for="website">Website:</label>
-        <input type="url" name="website" id="website" />
+        <input type="text" name="website" id="website" />
         <label for="established">Year established:</label>
         <input type="text" name="established" id="established" />
         <fieldset>
@@ -25,9 +25,9 @@
             <input type="radio" id="high" name="priceRange" value="¥¥¥" />
             <label for="high">High</label>
         </fieldset>
-        <label for="description">Description</label>
+        <label for="description">Description:</label>
         <textarea name="description" id="description"></textarea>
-        <label for="logo">Logo image:</label>
+        <label for="logo">Logo image (landscape featuring one or two models preferred):</label>
         <input type="file" name="logo" id="logo" accept="image/*" />
         <!-- <label for="heroImg">Hero image:</label>
         <input type="file" name="heroImg" id="heroImg" accept="image/*" /> -->

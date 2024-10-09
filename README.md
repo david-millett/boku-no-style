@@ -34,3 +34,10 @@ these are the most important things for it to work
 First priority was to add the ability to 'like' brands, as this is a core feature of the website. Managed to implement this by implementing a many-to-many relationship between brands and users, the most complex part of the project so far, which required reading around how to implement this. Created a virtual field on the user model to allow users to access a list of all the brands they like on their profile.
 Implemented some basic styling - in hindsight I would have done this sooner just for piece of mind, as a little goes a long way to making the product feel more complete.
 had an issue with vulnerabilities in dependencies - forced update and broke the app. learned the hard way that these are general issues and ones specific to my app that actually need addressing. ended up solving by deleting the lines that had my dependencies in package.json, removing node_modules and package-lock.json and re-installing them all
+problem = realised that after adding createdBy fiedl and adding it in my seeds to help populate the websitre and reset after testing. Duritnf testing found that I had forgotten to associated the session's user as createdBy when adding new brands
+initially wanted to upload two separate images in diff fields, but this didnt work as I intended
+
+day 5
+today's plan is styling and giving each page an identity and populating the website with more initial info to make it more useful and interesting
+carousel?
+error handling

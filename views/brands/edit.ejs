@@ -9,11 +9,11 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Edit <%= brand.name %></h1>
-    <form action="/brands/<%= brand._id %>?_method=PUT" method="POST">
+    <form class="form-sheet" action="/brands/<%= brand._id %>?_method=PUT" method="POST">
         <label for="name">Name:</label>
-        <input type="text" name="name" id="name" value="<%= brand.name %>" />
+        <input type="text" name="name" id="name" value="<%= brand.name %>" required />
         <label for="website">Website:</label>
-        <input type="url" name="website" id="website" value="<%= brand.website %>" />
+        <input type="text" name="website" id="website" value="<%= brand.website %>" />
         <label for="established">Year established:</label>
         <input type="text" name="established" id="established" value="<%= brand.established %>" />
         <fieldset>
@@ -25,8 +25,10 @@
             <input type="radio" id="high" name="priceRange" value="¥¥¥" <% if (brand.priceRange === '¥¥¥') { %>checked<% } %> />
             <label for="high">High</label>
         </fieldset>
-        <label for="description">Description</label>
+        <label for="description">Description:</label>
         <textarea name="description" id="description"><%= brand.description %></textarea>
+        <label for="logo">Change logo image:</label>
+        <input type="file" name="logo" id="logo" accept="image/*" />
         <button type="submit">Save changes</button>
     </form>
     <a href="/brands/<%= brand._id %>">Back to <%= brand.name %></a>
