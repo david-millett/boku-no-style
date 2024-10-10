@@ -8,21 +8,21 @@
 </head>
 <body>
     <%- include('./partials/_navbar.ejs') %>
-
+    <img class="home-image" src="/images/hysteric-glamour-hero.jpg" alt="People wearing Japanese streetwear" />
     <% if (user) { %>
-        <!-- <h1><span class="english">Welcome, <%= user.username %>!</span><span class="japanese">ようこそ、<%= user.username %>!</span></h1> -->
         <h1 class="page-heading">ようこそ、<%= user.username %>!</h1>
     <% } else { %>
         <h1 class="page-heading">ようこそ</h1>
     <% } %>
     
     
-    <h1>For people interested in Japanese streetwear and fashion.</h1>
-    <h2>Keep track of your favourite brands.</h2>
+    <h1>A community to explore the bold world of Japanese streetwear and fashion</h1>
+    <h2>Discover. Share. Define.</h2>
+    <h2>Keep track of your favourite brands</h2>
+    <h2>Upload your looks, explore bold fashion, and stay ahead of the curve</h2>
     <p><a href="/brands">Browse brands</a></p>
     <% if (user) { %>
-        <p class="small">Logged in as <a class="link" href="/auth/profile"><%= user.username %></a></p>
-        <p class="small"><a class="link" href="/auth/sign-out">Sign out</a></p>
+        <p class="small">Logged in as <a class="link" href="/auth/profile"><%= user.username %></a>.<a class="link" href="/auth/sign-out">Sign out</a></p>
     <% } else { %>
         <a class="link" href="/auth/sign-up">Register</a> or <a class="link" href="/auth/sign-in">Sign in</a>
     <% } %>

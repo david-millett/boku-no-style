@@ -33,6 +33,7 @@ h1 {
 
 .menu-link:hover {
     color: #92493B;
+    text-decoration: none;
 }
 
 .page-heading {
@@ -45,6 +46,17 @@ h2 {
     justify-content: center;
     color: #7b7363;
     margin-top: 10px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    color: #7b7363;
+    margin-top: 40px;
+    font-family: 'Montserrat';
+    font-weight: bold;
 }
 
 .small {
@@ -57,6 +69,7 @@ h2 {
 /* Nav bar */
 
 nav {
+    height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,43 +88,43 @@ nav {
 
 .logo {
     text-decoration: none;
-    color: #92493B;
-    border: 3px solid #92493B;
+    color: #682d22;
+    border: 3px solid #682d22;
     padding: 5px 15px;
-    margin: 10px;
+    margin-left: 20px;
+    /* margin-top: 10px; */
     font-family: 'Bungee Inline';
-    /* font-size: 1.5rem; */
+    font-size: 1.5rem;
 }
 
-@media(max-width: 600px){
+
+
+@media(max-width: 500px){
     .logo {
-        font-size: 0.75rem;
+        font-size: 1rem;
+    }
+    .nav-section {
+        font-size: smaller;
     }
 }
 
 .logo:hover {
     color: white;
     border: 3px solid white;
+    text-decoration: none;
 }
 
-
 .nav-section {
-    margin-right: 10px;
+    margin-right: 20px;
     font-family: 'Oswald';
     display: flex;
     gap: 10px;
 }
 
-h1 .english {
-    display: none;
-}
+/* Home page */
 
-h1:hover .english {
-    display: inline;
-}
-
-h1:hover .japanese {
-    display: none;
+.home-image {
+    width: 100%;
 }
 
 /* Browse brands */
@@ -153,7 +166,6 @@ h1:hover .japanese {
 .brand-card:hover {
     opacity: 75%;
 }
-
 
 /* Show page */
 
@@ -203,7 +215,7 @@ main {
     justify-content: space-evenly;
     align-items: center;
     padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     margin-bottom: 20px;
     /* font-size: 0.75rem; */
     font-family: 'Oswald';
@@ -226,8 +238,15 @@ main {
     border: none;
     cursor: pointer;
 }
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+} 
+
 .star {
     width: 25px;
+    margin-bottom: 20px;
 }
 
 .description {
@@ -239,10 +258,31 @@ main {
 
 /* gallery */
 
+#gallery-carousel img {
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    display: block;
+    margin: 0 auto;
+}
+
 .gallery-image {
     width: 250px;
     height: 400px;
     object-fit: cover;
+    border-radius: 8px;
+}
+
+.caption {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #525e5f;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: rgba(0,0,0,0.5);
+    padding: 1.5rem;
+    background-size: 60%;
     border-radius: 8px;
 }
 
@@ -258,6 +298,13 @@ main {
     margin-bottom: 40px;
     color: #7b7363;
     font-weight: bold;
+}
+
+.gallery-form {
+    background-color: #525e5f;
+    color: white;
+    padding-bottom: 20px;
+    border-radius: 5px;
 }
 
 label {

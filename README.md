@@ -60,3 +60,5 @@ some responsive bits
 deploy
 
 decided against location... given my timeframe, gathering the information would have been too time consuming. it was also replicating the reverse virtual populate of the profile page and wanted to prioritise diff functionality for the purposes of this app
+uploading images to a gallery went quite smoothly
+used bootstrap to make a carousel - adding the new stylesheet to do this broke some of my previous styling so had to check throuhg everything with a fine-toothed comb

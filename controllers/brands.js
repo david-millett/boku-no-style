@@ -49,7 +49,7 @@ router.get('/:brandId', async (req, res, next) => {
         if (mongoose.Types.ObjectId.isValid(req.params.brandId)) {
             const brand = await Brand.findById(req.params.brandId).populate('addedBy').populate('gallery.user')
             if (!brand) return next()
-                console.log(brand)
+                // console.log(brand)
             return res.render('brands/show.ejs', { brand })
         } else {
             next()
@@ -162,7 +162,21 @@ router.post('/:brandId/gallery', isSignedin, upload.single('image'), async (req,
 })
 
 //Delete image from gallery
-
+router.delete('/:brandId/gallery/:galleryId', isSignedin, async (req, res, next) => {
+    try {
+        const brand = await Brand.findById(req.params.brandId)
+        if (!brand) return next()
+        
+        const postToDelete = brand.gallery.id(req.params.galleryId)
+        if (!postToDelete) return next()
+        postToDelete.deleteOne()
+        await brand.save()
+        return res.redirect(`/brands/${req.params.brandId}`)
+    } catch (error) {
+        console.log(error)
+        return res.status(500).send('An error occurred')
+    }
+})
 
 
 module.exports = router
