@@ -88,8 +88,8 @@ nav {
 
 .logo {
     text-decoration: none;
-    color: #682d22;
-    border: 3px solid #682d22;
+    color: #921601;
+    border: 3px solid #921601;
     padding: 5px 15px;
     margin-left: 20px;
     font-family: 'Bungee Inline';
@@ -111,9 +111,12 @@ nav {
     gap: 10px;
 }
 
-@media(max-width: 500px){
+@media(max-width: 550px){
     .logo {
         font-size: 1rem;
+        border: 2px solid #921601;
+        line-height: 1.6rem;
+        padding: 3px 10px;
     }
     .nav-section {
         font-size: 1rem;
@@ -125,6 +128,60 @@ nav {
 .home-image {
     width: 100%;
 }
+
+/* .browse-brands {
+    background-color: #19201e;
+    width: fit-content;
+    padding: 10px 20px;
+} */
+
+.homepage-body {
+    max-width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.big-logo {
+    display: inline-block;
+    text-decoration: none;
+    color: #921601;
+    border: 6px solid #921601;
+    padding: 5px 15px;
+    margin-left: 20px;
+    font-family: 'Bungee Inline';
+    font-size: 3rem;
+    line-height: 4.5rem;
+}
+
+@media(max-width: 550px){
+    .big-logo {
+        font-size: 1.5rem;
+        border: 3px solid #921601;
+        line-height: 2rem;
+    }
+}
+
+/* .home-card {
+    position: relative;
+}
+
+.welcome {
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Bungee Inline';
+    text-shadow: 2px 0 5px #453d2e;
+} */
+
+
 
 /* Browse brands */
 
@@ -140,6 +197,7 @@ nav {
 
 .brand-card {
     position: relative;
+    transition: 0.3s;
 }
 
 .brand-title {
@@ -163,6 +221,7 @@ nav {
 
 .brand-card:hover {
     opacity: 75%;
+    transform: scale(1.02);
 }
 
 /* Show page */
@@ -349,3 +408,7 @@ textarea {
     color: #92493B;
     cursor: pointer;
 }
+
+
+
+
