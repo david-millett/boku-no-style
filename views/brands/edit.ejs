@@ -28,8 +28,8 @@
         <label for="description">Description:</label>
         <textarea name="description" id="description"><%= brand.description %></textarea>
         <label for="logo">Change logo image:</label>
-        <input type="file" name="logo" id="logo" accept="image/*" />
-        <button type="submit">Save changes</button>
+        <input type="file" name="logo" id="logo" accept="image/png, image/jpeg, image/jpg" />
+        <button class="button-style" type="submit">Save changes</button>
     </form>
     <p class="small"><a href="/brands/<%= brand._id %>">Back to <%= brand.name %></a></p>
 </body>

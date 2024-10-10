@@ -51,7 +51,7 @@ show page - looked good on small screen style, but scales to full width badly. T
 day 6
 error handling
 X add gallery pics
-check his image changes
+X check his image changes
 homepage
 X remove references to logo
 delete dead code
@@ -62,3 +62,4 @@ deploy
 decided against location... given my timeframe, gathering the information would have been too time consuming. it was also replicating the reverse virtual populate of the profile page and wanted to prioritise diff functionality for the purposes of this app
 uploading images to a gallery went quite smoothly
 used bootstrap to make a carousel - adding the new stylesheet to do this broke some of my previous styling so had to check throuhg everything with a fine-toothed comb
+this really stressed me - ended up being the line height that was set wrongly and messed up my logo. Couldnt add to every page as it broke everything each time. Glad I found the culprit by investigating intensively on inspect

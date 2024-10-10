@@ -3,7 +3,6 @@ const express = require('express')
 const bcrypt = require('bcryptjs')
 const router = express.Router()
 
-
 // ! -- Model
 const User = require('../models/user')
 const isSignedin = require('../middleware/is-signed-in')
@@ -48,8 +47,6 @@ router.get('/sign-in', (req, res) => {
 //Sign in user
 router.post('/sign-in', async (req, res) => {
     try {
-        console.log(req.body)
-        console.log(req.session)
         const userInDatabase = await User.findOne({ username: req.body.username })
         if (!userInDatabase) {
             return res.status(401).send('Login failed. Please try again.')
@@ -81,14 +78,11 @@ router.get('/sign-out', (req, res) => {
 router.get('/profile', isSignedin, async (req, res) => {
     try {
         const myProfile = await User.findById(req.session.user._id).populate('favouriteBrands')
-        console.log(myProfile)
         return res.render('auth/profile.ejs', { profile: myProfile })
     } catch (error) {
         console.log(error)
         return res.status(500).send('An error occurred')
     }
 })
-
-
 
 module.exports = router

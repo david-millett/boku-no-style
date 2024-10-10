@@ -13,7 +13,8 @@
 body {
     background-color: #D9DEDD;
     font-family: 'Montserrat';
-    /* max-width: 600px; */
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -40,6 +41,8 @@ h1 {
 .page-heading {
     color: #525e5f;
     margin-top: 20px;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 h2 {
@@ -74,14 +77,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-left: auto;
-    margin-right: auto; */
     background-color: #798788;
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 10;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .6);
+    padding: 0;
 }
 
 .logo {
@@ -90,9 +92,9 @@ nav {
     border: 3px solid #682d22;
     padding: 5px 15px;
     margin-left: 20px;
-    /* margin-top: 10px; */
     font-family: 'Bungee Inline';
     font-size: 1.5rem;
+    line-height: 2rem;
 }
 
 .logo:hover {
@@ -138,7 +140,6 @@ nav {
 
 .brand-card {
     position: relative;
-
 }
 
 .brand-title {
@@ -203,8 +204,6 @@ main {
     bottom: 10%;
     left: 50%;
     transform: translate(-50%);
-    /* writing-mode: vertical-lr;
-    text-orientation: upright; */
 }
 
 .stats {
@@ -212,9 +211,7 @@ main {
     justify-content: space-evenly;
     align-items: center;
     padding-top: 10px;
-    /* padding-bottom: 10px; */
     margin-bottom: 20px;
-    /* font-size: 0.75rem; */
     font-family: 'Oswald';
     background-color: #19201e;
     color: white;
@@ -256,8 +253,6 @@ button:focus {
 /* gallery */
 
 #gallery-carousel img {
-    /* margin-left: auto; */
-    /* margin-right: auto; */
     display: block;
     margin: 0 auto;
 }
@@ -283,7 +278,17 @@ button:focus {
     border-radius: 8px;
 }
 
+.gallery-info {
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
 /* Forms */
+
+input {
+    margin: 0;
+}
 
 .form-sheet {
     max-width: 500px;
@@ -301,6 +306,9 @@ button:focus {
     background-color: #525e5f;
     color: white;
     padding-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
     border-radius: 5px;
 }
 

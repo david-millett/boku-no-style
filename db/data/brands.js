@@ -5,7 +5,7 @@ module.exports = [
         established: '1985',
         priceRange: '¥¥¥',
         description: 'KAPITAL takes its name from Kojima, Okayama, an area known as Japan’s ‘Denim Capital’. It reimagines mid-century Americana using heritage production techniques to create an authentic workwear feel. The aesthetic is eclectic and handicraft-inspired.',
-        logo: 'uploads/kapital2.jpeg'
+        logo: '/images/kapital2.jpeg'
     },
     {
         name: "A Bathing Ape (BAPE)",
@@ -13,7 +13,7 @@ module.exports = [
         established: "1993",
         priceRange: "¥¥¥",
         description: "Founded by Nigo, BAPE is known for its iconic ape head logo, camo prints, and streetwear that blends Japanese pop culture and hip-hop influences.",
-        logo: "uploads/bape1.png",
+        logo: "/images/bape1.png",
     },
     {
         name: "Neighborhood",
@@ -21,7 +21,7 @@ module.exports = [
         established: "1994",
         priceRange: "¥",
         description: "Started by Shinsuke Takizawa, Neighborhood is a pioneer in Japanese street fashion, with designs inspired by motorcycle culture, military aesthetics, and American workwear.",
-        logo: "uploads/neighborhood1.png",
+        logo: "/images/neighborhood1.png",
     },
     {
         name: "WTAPS",
@@ -29,7 +29,7 @@ module.exports = [
         established: "1996",
         priceRange: "¥¥",
         description: "Founded by Tetsu Nishiyama, WTAPS combines military-inspired pieces with a utilitarian approach, focusing on quality materials and craftsmanship.",
-        logo: "uploads/wtaps1.jpg",
+        logo: "/images/wtaps1.jpg",
     },
     {
         name: "UNDERCOVER",
@@ -37,7 +37,7 @@ module.exports = [
         established: "1990",
         priceRange: "¥¥¥",
         description: "Created by Jun Takahashi, UNDERCOVER blends high fashion with punk and streetwear elements, known for its avant-garde designs and thought-provoking graphics.",
-        logo: "uploads/undercover1.jpg",
+        logo: "/images/undercover1.jpg",
     },
     {
         name: "Visvim",
@@ -45,14 +45,14 @@ module.exports = [
         established: "2001",
         priceRange: "¥¥¥",
         description: "Founded by Hiroki Nakamura, Visvim merges traditional craftsmanship with modern streetwear, known for its premium fabrics and artisanal approach to design.",
-        logo: "uploads/visvim1.jpg",
+        logo: "/images/visvim1.jpg",
     },
     {
         name: "Cav Empt (C.E)",
         website: "https://www.cavempt.com/",
         priceRange: "¥¥",
         description: "Created by Sk8thing and Toby Feltwell, Cav Empt focuses on futuristic designs with dystopian themes, incorporating bold graphics and unique silhouettes into streetwear.",
-        logo: "uploads/cavempt1.jpg",
+        logo: "/images/cavempt1.jpg",
     },
     {
         name: "HUMAN MADE",
@@ -60,7 +60,7 @@ module.exports = [
         established: "2010",
         priceRange: "¥¥",
         description: "Founded by Nigo after leaving BAPE, HUMAN MADE is a vintage-inspired brand that combines classic American workwear aesthetics with modern streetwear influences.",
-        logo: "uploads/human-made1.jpg",
+        logo: "/images/human-made1.jpg",
     },
     {
         name: "White Mountaineering",
@@ -68,7 +68,7 @@ module.exports = [
         established: "2006",
         priceRange: "¥¥",
         description: "Started by Yosuke Aizawa, White Mountaineering fuses outdoor and technical apparel with contemporary streetwear, creating functional yet stylish clothing.",
-        logo: "uploads/white-mountaineering1.jpg",
+        logo: "/images/white-mountaineering1.jpg",
     },
     {
         name: "Mastermind Japan",
@@ -76,7 +76,7 @@ module.exports = [
         established: "1997",
         priceRange: "¥¥¥",
         description: "Founded by Masaaki Homma, Mastermind Japan is known for its luxury streetwear featuring skull motifs and premium materials, often in monochromatic palettes.",
-        logo: "uploads/mastermind3.jpeg",
+        logo: "/images/mastermind3.jpeg",
     },
     {
         name: "Hysteric Glamour",
@@ -84,7 +84,7 @@ module.exports = [
         established: "1984",
         priceRange: "¥¥",
         description: "Founded by Nobuhiko Kitamura, Hysteric Glamour blends punk, grunge, and retro American pop culture references into its edgy streetwear designs.",
-        logo: "uploads/hysteric-glamour2.jpg",
+        logo: "/images/hysteric-glamour2.jpg",
     },
     {
         name: "Uniqlo",
@@ -92,7 +92,7 @@ module.exports = [
         established: "1949",
         priceRange: "¥",
         description: "One of Japan's most affordable and globally known brands, Uniqlo focuses on minimalist, functional, and high-quality basics, often collaborating with high-end designers.",
-        logo: "uploads/uniqlo2.png",
+        logo: "/images/uniqlo2.png",
     },
     {
         name: "BEAMS",
@@ -100,7 +100,7 @@ module.exports = [
         established: "1976",
         priceRange: "¥¥",
         description: "A lifestyle brand that offers a wide range of apparel, including streetwear-inspired designs, with various collaborations that blend Western and Japanese fashion.",
-        logo: "uploads/beams1.jpg",
+        logo: "/images/beams1.jpg",
     },
     {
         name: "COMME des GARÇONS PLAY",
@@ -108,7 +108,7 @@ module.exports = [
         established: "2009",
         priceRange: "¥¥",
         description: "A diffusion line of the legendary Japanese fashion house, COMME des GARÇONS, this brand offers more affordable and accessible streetwear with the signature avant-garde style.",
-        logo: "uploads/comme-des-garcons1.jpg",
+        logo: "/images/comme-des-garcons1.jpg",
     },
     {
         name: "The North Face Purple Label",
@@ -116,7 +116,7 @@ module.exports = [
         established: "2003",
         priceRange: "¥¥¥",
         description: "A Japan-exclusive collaboration between The North Face and Nanamica, Purple Label focuses on high-quality, fashion-forward outdoor and streetwear designs.",
-        logo: "uploads/north-face-purple2.jpg",
+        logo: "/images/north-face-purple2.jpg",
     },
     {
         name: "Y-3",
@@ -124,7 +124,7 @@ module.exports = [
         established: "2002",
         priceRange: "¥¥",
         description: "A collaboration between Adidas and Japanese designer Yohji Yamamoto, Y-3 offers high-end sportswear with avant-garde, minimalist designs, bridging streetwear and high fashion.",
-        logo: "uploads/y-3.jpg",
+        logo: "/images/y-3.jpg",
     },
     {
         name: "EVISU",
@@ -132,58 +132,6 @@ module.exports = [
         established: "1991",
         priceRange: "¥¥¥",
         description: "Famous for its premium denim and seagull logo, EVISU is a staple in Japanese streetwear, known for its high-quality craftsmanship and bold designs.",
-        logo: "uploads/evisu1.jpg",
+        logo: "/images/evisu1.jpg",
     },
 ];
-
-
-
-//     {
-//         name: "SOPHNET.",
-//         website: ,
-//         established: "1998",
-//         priceRange: ,
-//         description: "Founded by Hirofumi Kiyonaga, SOPHNET. is known for blending traditional menswear with streetwear sensibilities, incorporating patterns, technical fabrics, and functional designs.",
-//         logo: ,
-//     },
-//     {
-//         name: "Freak's Store",
-//         website: ,
-//         established: "1986",
-//         priceRange: ,
-//         description: "Freak's Store offers casual streetwear and American vintage-inspired apparel, blending Japanese craftsmanship with relaxed, everyday designs.",
-//         logo: ,
-//     },
-//     {
-//         name: "Graphpaper",
-//         website: ,
-//         established: 2015,
-//         priceRange: ,
-//         description: "A minimalist streetwear brand known for its simple yet refined designs, Graphpaper focuses on high-quality materials and oversized silhouettes.",
-//         logo: ,
-//     },
-//     {
-//         name: "Meanswhile",
-//         website: ,
-//         established: "2014",
-//         priceRange: ,
-//         description: "A relatively new brand, Meanswhile specializes in functional streetwear with utilitarian designs that focus on technical fabrics and minimalist aesthetics.",
-//         logo: ,
-//     },
-//     {
-//         name: "Wacko Maria",
-//         website: ,
-//         established: "2005",
-//         priceRange: ,
-//         description: "Founded by former J-League footballers, Wacko Maria is inspired by music and the arts, combining classic menswear with street style and bold graphic prints.",
-//         logo: ,
-//     },
-//     {
-//         name: "Bedwin & The Heartbreakers",
-//         website: ,
-//         established: "2004",
-//         priceRange: ,
-//         description: "A Tokyo-based brand known for its streetwear-meets-classic tailoring aesthetic, focusing on clean lines, playful details, and collaborations.",
-//         logo: ,
-//     }
-// ];

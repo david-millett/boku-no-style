@@ -12,4 +12,3 @@ module.exports = [
     { username: "VelvetVandal", password: bcrypt.hashSync("NightNinja8") },
     { username: "ZenZero", password: bcrypt.hashSync("UrbanWave19") },
 ];
-
