@@ -237,6 +237,15 @@ main {
     text-align: center;
 }
 
+/* gallery */
+
+.gallery-image {
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 /* Forms */
 
 .form-sheet {

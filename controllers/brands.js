@@ -47,7 +47,7 @@ router.post('/', isSignedin, upload.single('logo'), async (req, res) => {
 router.get('/:brandId', async (req, res, next) => {
     try {
         if (mongoose.Types.ObjectId.isValid(req.params.brandId)) {
-            const brand = await Brand.findById(req.params.brandId).populate('addedBy')
+            const brand = await Brand.findById(req.params.brandId).populate('addedBy').populate('gallery.user')
             if (!brand) return next()
                 console.log(brand)
             return res.render('brands/show.ejs', { brand })
@@ -141,5 +141,28 @@ router.delete('/:brandId/favourites', isSignedin, async (req, res, next) => {
         return res.redirect(`/brands/${req.params.brandId}`)
     }
 })
+
+//! Adding images to and removing from the gallery
+
+//Post image to gallery
+router.post('/:brandId/gallery', isSignedin, upload.single('image'), async (req, res, next) => {
+    try {
+        req.body.user = req.session.user._id
+        req.body.image = req.file.path
+        const brand = await Brand.findById(req.params.brandId)
+        if (!brand) return next()
+        brand.gallery.push(req.body)
+        await brand.save()
+        console.log(brand)
+        return res.redirect(`/brands/${req.params.brandId}`)
+    } catch (error) {
+        console.log(error)
+        return res.redirect(`/brands/${req.params.brandId}`)
+    }
+})
+
+//Delete image from gallery
+
+
 
 module.exports = router

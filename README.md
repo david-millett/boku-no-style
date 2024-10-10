@@ -57,3 +57,6 @@ remove references to logo
 delete dead code
 check requirements
 some responsive bits
+deploy
+
+decided against location... given my timeframe, gathering the information would have been too time consuming. it was also replicating the reverse virtual populate of the profile page and wanted to prioritise diff functionality for the purposes of this app

@@ -46,6 +46,28 @@
             <% } else { %>
                 <p class="small">This brand was added by <strong><%= brand.addedBy.username %></strong></p>
             <% } %>
+
+            <h2>Gallery</h2>
+            <p class="description">Upload your fit or share your haul with the community</p>
+            
+            <div class="gallery-grid">
+                <% brand.gallery.forEach(post => { %>
+                    <div class="gallery-card">
+                        <img class="gallery-image" src="/<%= post.image %>" />
+                        <p><strong><%= post.user.username %></strong> <%= post.caption %></p>
+                    </div>
+                <% }) %>
+            </div>
+            
+            <form class="form-sheet" action="/brands/<%= brand._id %>/gallery" method="POST" enctype="multipart/form-data">
+                <label for="image">Upload image:</label>
+                <input type="file" name="image" id="image" accept="image/*" />
+                <label for="caption">Add caption:</label>
+                <input type="text" name="caption" id="caption" />
+                <button class="button-style" type="submit">Post</button>
+            </form>
+
+
             <p class="small"><a class="link" href="/brands">Back to brands</a></p>
         </div>
     </main>
