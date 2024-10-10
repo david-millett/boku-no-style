@@ -13,7 +13,7 @@
         <div class="main-title">
             <h1 class="show-h1"><%= brand.name %></h1>
         </div>
-        <img src="/<%= brand.logo %>" alt="<%= brand.name %>'s logo" class="hero-image"/>
+        <img src="/<%= brand.logo %>" alt="<%= brand.name %> main image" class="hero-image"/>
     </div>
     <main>
         <div class="content">
@@ -48,7 +48,7 @@
                 <p class="small">This brand was added by <strong><%= brand.addedBy.username %></strong></p>
             <% } %>
 
-            <h2>Gallery</h2>
+            <h1 class="page-heading">GALLERY</h1>
             <p class="description">Upload your fit or share your haul with the community</p>
             
             <% if (brand.gallery.length > 0) { %>
@@ -87,13 +87,20 @@
             
             
             <h4>Add to gallery</h4>
-            <form class="form-sheet gallery-form" action="/brands/<%= brand._id %>/gallery" method="POST" enctype="multipart/form-data">
-                <label for="image">Upload image:</label>
-                <input type="file" name="image" id="image" accept="image/*" />
-                <label for="caption">Add caption:</label>
-                <input type="text" name="caption" id="caption" />
-                <button class="button-style" type="submit">Post</button>
-            </form>
+            
+            <% if (user) { %>
+                <form class="form-sheet gallery-form" action="/brands/<%= brand._id %>/gallery" method="POST" enctype="multipart/form-data">
+                    <label for="image">Upload image:</label>
+                    <input type="file" name="image" id="image" accept="image/*" />
+                    <label for="caption">Add caption:</label>
+                    <input type="text" name="caption" id="caption" />
+                    <button class="button-style" type="submit">Post</button>
+                </form>
+            <% } else { %>
+                <p class="description"><a class="link" href="/auth/sign-in">Sign in</a> to upload to the gallery</p>
+            <% } %>
+
+
 
 
             <p class="small"><a class="link" href="/brands">Back to brands</a></p>

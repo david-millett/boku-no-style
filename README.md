@@ -50,10 +50,10 @@ show page - looked good on small screen style, but scales to full width badly. T
 
 day 6
 error handling
-add gallery pics
+X add gallery pics
 check his image changes
 homepage
-remove references to logo
+X remove references to logo
 delete dead code
 check requirements
 some responsive bits
