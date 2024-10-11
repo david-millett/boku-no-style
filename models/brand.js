@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const gallerySchema = new mongoose.Schema({
     image: { type: String, required: true },
     caption: String,
-    user: { type: mongoose.Types.ObjectId, ref: 'User', required: true },
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
 }, {
     timestamps: true,
 })
@@ -18,8 +18,8 @@ const brandSchema = new mongoose.Schema({
     // heroImg: { type: String },
     // comments:
     gallery: [gallerySchema],
-    addedBy: { type: mongoose.Types.ObjectId, ref: 'User', require: true },
-    fans: [{ type: mongoose.Types.ObjectId, ref: 'User' }],
+    addedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', require: true },
+    fans: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
 })
 
 const Brand = mongoose.model("Brand", brandSchema)

@@ -46,7 +46,7 @@ router.post('/', isSignedin, upload.single('logo'), async (req, res) => {
 //Show page
 router.get('/:brandId', async (req, res, next) => {
     try {
-        if (mongoose.Types.ObjectId.isValid(req.params.brandId)) {
+        if (mongoose.Schema.Types.ObjectId.isValid(req.params.brandId)) {
             const brand = await Brand.findById(req.params.brandId).populate('addedBy').populate('gallery.user')
             if (!brand) return next()
             return res.render('brands/show.ejs', { brand })
@@ -62,7 +62,7 @@ router.get('/:brandId', async (req, res, next) => {
 //Edit page - form
 router.get('/:brandId/edit', isSignedin, async (req, res, next) => {
     try {
-        if (mongoose.Types.ObjectId.isValid(req.params.brandId)) {
+        if (mongoose.Schema.Types.ObjectId.isValid(req.params.brandId)) {
             const brand = await Brand.findById(req.params.brandId)
             if (!brand) return next()
             if (!brand.addedBy.equals(req.session.user._id)) {
