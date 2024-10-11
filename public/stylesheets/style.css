@@ -129,12 +129,6 @@ nav {
     width: 100%;
 }
 
-/* .browse-brands {
-    background-color: #19201e;
-    width: fit-content;
-    padding: 10px 20px;
-} */
-
 .homepage-body {
     max-width: 800px;
     display: block;
@@ -157,6 +151,18 @@ nav {
     line-height: 4.5rem;
 }
 
+.home-link {
+    color: #525e5f;
+}
+
+.home-link:hover {
+    color: #921601;
+}
+
+.home-space {
+    margin-bottom: 20px;
+}
+
 @media(max-width: 550px){
     .big-logo {
         font-size: 1.5rem;
@@ -164,24 +170,6 @@ nav {
         line-height: 2rem;
     }
 }
-
-/* .home-card {
-    position: relative;
-}
-
-.welcome {
-    color: white;
-    font-size: 60px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Bungee Inline';
-    text-shadow: 2px 0 5px #453d2e;
-} */
-
-
 
 /* Browse brands */
 

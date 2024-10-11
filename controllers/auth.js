@@ -35,7 +35,7 @@ router.post('/sign-up', async (req, res) => {
         })
     } catch (error) {
         console.log(error)
-        res.status(500).send('An error has occurred')
+        res.status(500).render('500.ejs')
     }
 })
 
@@ -63,7 +63,7 @@ router.post('/sign-in', async (req, res) => {
         })
     } catch (error) {
         console.log(error)
-        res.status(500).send('An error occurred')
+        res.status(500).render('500.ejs')
     }
 })
 
@@ -81,7 +81,7 @@ router.get('/profile', isSignedin, async (req, res) => {
         return res.render('auth/profile.ejs', { profile: myProfile })
     } catch (error) {
         console.log(error)
-        return res.status(500).send('An error occurred')
+        return res.status(500).render('500.ejs')
     }
 })
 

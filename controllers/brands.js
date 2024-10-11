@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
         res.render('brands/index.ejs', { brands })
     } catch (error) {
         console.log(error)
-        return res.status(500).send('An error occured')
+        return res.status(500).render('500.ejs')
     }
 })
 
@@ -39,7 +39,7 @@ router.post('/', isSignedin, upload.single('logo'), async (req, res) => {
         return res.redirect('/brands')
     } catch (error) {
         console.log(error)
-        return res.status(500).send('An error occured')
+        return res.status(500).render('500.ejs')
     }
 })
 
@@ -55,7 +55,7 @@ router.get('/:brandId', async (req, res, next) => {
         }
     } catch (error) {
         console.log(error)
-        return res.status(500).send('An error occurred')
+        return res.status(500).render('500.ejs')
     }
 })
 
@@ -74,7 +74,7 @@ router.get('/:brandId/edit', isSignedin, async (req, res, next) => {
         }
     } catch (error) {
         console.log(error)
-        return res.status(500).send('An error occurred')
+        return res.status(500).render('500.ejs')
     }
 })
 
@@ -89,7 +89,7 @@ router.put('/:brandId', isSignedin, async (req, res) => {
         throw new Error('You are not authorised to perform this action')
     } catch (error) {
         console.log(error)
-        return res.status(500).send('An error occurred')
+        return res.status(500).render('500.ejs')
     }
 })
 
@@ -104,7 +104,7 @@ router.delete('/:brandId', async (req, res) => {
         throw new Error('You are not authorised to perform this action')
     } catch (error) {
         console.log(error)
-        return res.status(500).send('An error occurred')
+        return res.status(500).render('500.ejs')
     }
 })
 
@@ -170,7 +170,7 @@ router.delete('/:brandId/gallery/:galleryId', isSignedin, async (req, res, next)
         return res.redirect(`/brands/${req.params.brandId}`)
     } catch (error) {
         console.log(error)
-        return res.status(500).send('An error occurred')
+        return res.status(500).render('500.ejs')
     }
 })
 

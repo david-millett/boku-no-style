@@ -63,3 +63,10 @@ decided against location... given my timeframe, gathering the information would 
 uploading images to a gallery went quite smoothly
 used bootstrap to make a carousel - adding the new stylesheet to do this broke some of my previous styling so had to check throuhg everything with a fine-toothed comb
 this really stressed me - ended up being the line height that was set wrongly and messed up my logo. Couldnt add to every page as it broke everything each time. Glad I found the culprit by investigating intensively on inspect
+I really struggled with the homepage... getting it to match the style and scale well... adn just look good in general. It was probably the biggest sticking point of the whole project. wanted it to look good because it's the first impression.
+
+Day 7
+X homepage
+error handling
+check requirements
+deploy
