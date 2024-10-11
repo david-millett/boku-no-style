@@ -68,5 +68,5 @@ I really struggled with the homepage... getting it to match the style and scale 
 Day 7
 X homepage
 error handling
-check requirements
-deploy
+X check requirements
+X deploy

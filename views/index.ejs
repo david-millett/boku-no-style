@@ -8,19 +8,13 @@
 </head>
 <body>
     <%- include('./partials/_navbar.ejs') %>
-
     <div class="home-card">
         <img class="home-image" src="/images/hysteric-glamour-hero.jpg" alt="People wearing Japanese streetwear" />
     </div>
-
     <div class="homepage-body">
         <h1 class="page-heading home-space">ようこそへ</h1>
         <h1 class="big-logo home-space">Boku no Style</h1>
         <h2 class="home-space">Explore the bold and distinctive world of Japanese streetwear and fashion</h2>
-        <!-- <h2>Discover. Share. Define.</h2> -->
-        <!-- <h2>Upload looks</h2>
-        <h2>Explore brands</h2>
-        <h2>Stay ahead of the curve</h2> -->
         <h1><a class="home-link home-space" href="/brands">BROWSE BRANDS</a></h1>
         <% if (user) { %>
             <p class="home-space">Logged in as <a class="link" href="/auth/profile"><%= user.username %></a>. <a class="link" href="/auth/sign-out">Sign out</a></p>
