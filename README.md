@@ -207,7 +207,9 @@ After some research, I discovered that setting the z-value of the `sticky` navba
 
 ### Scaling across different screens
 
-With mobile and desktop views in mind, you have to strive to create a design that looks good across two different viewpoints. Some, like the brands index and profile pages, immediately scaled well between the two views. The show page was one I found most difficult to get right - I liked the way it looked on mobile view but not on a bigger screen at first. To counteract this, I decided to set a max width to preserve the integrity of the layout. I added a darker `background-color` to the sections outside of the main content to improve the look. This is something I want to research further as I believe it's really important for a website to look good at different widths in the modern age.
+With mobile and desktop views in mind, you have to strive to create a design that looks good across two different viewpoints. Some, like the brands index and profile pages, immediately scaled well between the two views. The show page was one I found most difficult to get right - I liked the way it looked on mobile view but not on a bigger screen at first.
+
+To counteract this, I decided to set a max width to preserve the integrity of the layout. I added a darker `background-color` to the sections outside of the main content to improve the look. This is something I want to research further as I believe it's really important for a website to look good at different widths in the modern age.
 
 ```
 main {
