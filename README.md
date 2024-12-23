@@ -24,18 +24,6 @@ The app allows users to view different brands and find out more information abou
 
 'Boku no' translates to 'My' in Japanese, so the app is essentially called 'My Style'. If I were developing this as a concept, you could expand on this idea and create hubs for different countries - a 'Mon Style' for people wanting to learn about France's fashion gems, for instance!
 
-## Technologies used
-
-*Boku no Style* is a full-stack project developed in *VS Code* using the following technologies:
-
-* MEN Stack
-    * MongoDB
-    * Express
-    * Node.js
-* HTML
-* CSS
-* JavaScript
-
 ## Brief
 
 This was the second project I completed as part of my software engineering bootcamp at General Assembly.
@@ -47,6 +35,18 @@ The brief was to create a MEN Stack app with full CRUD functionality. As a minim
 * Full CRUD functionality
 * Feature authorisation - only logged in users can create, update, or delete data
 * Be deployed online
+
+## Technologies used
+
+*Boku no Style* is a full-stack project developed in *VS Code* using the following technologies:
+
+* MEN Stack
+    * MongoDB
+    * Express
+    * Node.js
+* HTML
+* CSS
+* JavaScript
 
 ## Planning
 
