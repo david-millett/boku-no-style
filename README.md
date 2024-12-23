@@ -1,16 +1,16 @@
-# boku-no-style
+# Boku-no-Style
 
 ![Boku no Style](./screenshots/index-page.png)
 
-### Deployment link
+### 🔗 Deployment link
 
 * [Boku no Style](https://boku-no-style.netlify.app/)
 
-### Timeframe
+### 📅 Timeframe
 
 * 1 week
 
-### Working team
+### 🙋 Working team
 
 * Solo project
 
