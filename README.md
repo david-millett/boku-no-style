@@ -18,7 +18,7 @@
 
 *Boku no Style* is an app designed for enthusiasts of Japanese streetwear fashion - or people who are interested in finding out more about it!
 
-I was inspired to create this app after living in Japan for two years, which was when I became particularly interested in and passionate about its unique and storied fashion scene. Although there are some resources out there for Western and other non-Japanese fans of Japanese fashion, it is mainly led by passionate members of the community and there can be a high barrier to entry - a combination of language, different countries, difficulty shipping, and more makes it difficult to research and obtain pieces. So it seemed like a gap in the market for this kind of resource!
+I was inspired to create this app after living in Japan for two years. Although there are some resources out there for Western and other non-Japanese fans of Japanese fashion, it is mainly led by passionate members of the community and there can be a high barrier to entry - a combination of language, overseas shipping, and more makes it difficult to research and obtain pieces. So it seemed like a gap in the market for this kind of resource!
 
 The app allows users to view different brands and find out more information about them. If they are logged in, they can add brands to their favourite list and add any new brands they discover. A key aspect is the social 'community' nature of the app. Users can upload pictures to each brand's 'gallery' section, such as selfies, clothing hauls, etc.
 
@@ -84,7 +84,7 @@ I outlined my user stories on *Trello* to track my tasks.
 
 The first step was to create a functioning website, so it made sense to start things off by creating a server and landing page.
 
-To better organise the code, I then created a controller file called `brands.js` to define all the CRUD routes needed for the fashion brand pages. This included `GET` routes for all associated pages - like the index, show, new form, and edit form pages. It also contains the `CREATE`, `PUT`, and `DELETE` routes for full functionality.
+To better organise the code, I created a controller file called `brands.js` to define all the CRUD routes needed for the fashion brand pages. This included `GET` routes for all associated pages - like the index, show, new form, and edit form pages. It also contains the `CREATE`, `PUT`, and `DELETE` routes for full functionality.
 
 I also created a separate `auth.js` controller file to handle sign up and sign in routes and pages. Having these separate files allowed my `server.js` file to remain nice and lean, as can be seen in its final iteration:
 
@@ -172,7 +172,9 @@ One of the early challenges I faced was trying to implement too many features at
 
 ### Dependencies
 
-The biggest issue I faced was when I accidentally broke the whole project. When installing a dependency, I saw a message about it having vulnerabilities - because I am new to this, I interpreted this an a problem with my project. So, I followed the directions to force an update and broke the app! I learned the hard way that these are general issues and not ones specific to my app that actually need addressing - it's safe to say I won't be making that error again! I knew there would be a way to fix it, and there was - I solve this by deleting the lines of code that had my dependencies in the `package.json` file, then removing `node_modules` and `package-lock.json` before re-installing all my dependencies afresh.
+The biggest issue I faced was when I accidentally broke the whole project. When installing a dependency, I saw a message about it having vulnerabilities - because I am new to this, I interpreted this an a problem with my project. So, I followed the directions to force an update and broke the app! I learned the hard way that these are general issues and not ones specific to my app that actually need addressing - it's safe to say I won't be making that error again!
+
+I knew there would be a way to fix it, and there was - I solved this by deleting the lines of code that had my dependencies in the `package.json` file, then removing `node_modules` and `package-lock.json` before re-installing all my dependencies afresh.
 
 ### Brand cards
 
